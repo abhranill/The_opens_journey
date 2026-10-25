@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The OPENS Journey — Himalaya, Beaches & Beyond</title>
+<meta name="description" content="The OPENS Journey plans trips to Sikkim, Darjeeling, Kalimpong, Dooars, Kashmir, Goa, Andaman and the Northeast.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="The OPENS Journey home">
+    <span class="logo-slot" data-logo></span>
+    <span class="brand-name">The OPENS Journey</span>
+  </a>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="links" id="links">
+    <a href="#destinations">Destinations</a>
+    <a href="#why">Why us</a>
+    <a href="#contact">Contact</a>
+    <a class="btn btn-sm" href="#contact" data-plan>Plan my trip</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <span class="logo-slot logo-xl" data-logo></span>
+      <h1>The OPENS Journey</h1>
+      <p class="tagline">Open your eyes. Open your heart. Open the road.</p>
+      <p class="sub">Handcrafted trips across the Himalaya, the Dooars jungles, Kashmir, Goa, Andaman and the Northeast.</p>
+      <div class="cta">
+        <a class="btn" href="#destinations">Explore destinations</a>
+        <a class="btn btn-ghost" href="#contact" data-plan>Plan my trip</a>
+      </div>
+    </div>
+    <a class="scroll" href="#destinations" aria-label="Scroll to destinations"><span></span></a>
+  </section>
+
+  <section class="section" id="destinations">
+    <div class="wrap">
+      <p class="eyebrow">Our catalog</p>
+      <h2>Where do you want to go?</h2>
+      <div class="filters" id="filters" role="tablist" aria-label="Filter destinations"></div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="section alt" id="why">
+    <div class="wrap">
+      <p class="eyebrow">Why travel with us</p>
+      <h2>Trips planned by people who know the roads</h2>
+      <div class="features">
+        <article><div class="ico">🧭</div><h3>Local knowledge</h3><p>Routes, stays and timings picked for the season, not copied from a brochure.</p></article>
+        <article><div class="ico">🎯</div><h3>Made around you</h3><p>Family, couple, friends or solo — we shape the itinerary and budget to fit.</p></article>
+        <article><div class="ico">🤝</div><h3>One point of contact</h3><p>Stays, transport and sightseeing handled together, so you just enjoy the trip.</p></article>
+        <article><div class="ico">⭐</div><h3>Honest reviews</h3><p>Every traveller can leave a public review on the destination they visited.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap contact">
+      <div>
+        <p class="eyebrow">Get in touch</p>
+        <h2>Tell us where, we'll plan the how</h2>
+        <p class="muted">Send your dates, group size and dream destination — we'll reply with a plan.</p>
+        <ul class="contact-list" id="contactList"></ul>
+      </div>
+      <form class="card form" id="enquiry">
+        <label>Your name<input name="name" required maxlength="60" autocomplete="name"></label>
+        <label>Destination<select name="dest" id="enqDest"></select></label>
+        <label>Travel dates / group size<input name="details" maxlength="120" placeholder="e.g. 10–15 Dec, 4 people"></label>
+        <button class="btn" type="submit">Send enquiry on WhatsApp</button>
+        <small class="muted" id="enqNote"></small>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span class="logo-slot logo-sm" data-logo></span>
+  <p>© <span id="year"></span> The OPENS Journey · Sikkim | Darjeeling | Kalimpong | Dooars | Kashmir | Goa | Andaman | Northeast</p>
+</footer>
+
+<!-- Destination modal -->
+<div class="modal" id="modal" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <button class="close" id="mClose" aria-label="Close">×</button>
+    <div class="m-hero" id="mHero"></div>
+    <div class="m-body">
+      <h3 id="mTitle"></h3>
+      <p class="rating-line" id="mRating"></p>
+      <p id="mDesc"></p>
+      <div class="chips" id="mChips"></div>
+      <ul class="highlights" id="mHigh"></ul>
+      <div class="m-actions">
+        <a class="btn btn-sm" id="mPlan" href="#contact">Plan this trip</a>
+        <label class="btn btn-sm btn-ghost-dark admin-only" hidden>Add photo<input type="file" id="mUpload" accept="image/*" hidden></label>
+      </div>
+      <hr>
+      <h4>Traveller reviews</h4>
+      <div id="mReviews" class="reviews"></div>
+      <form id="reviewForm" class="review-form">
+        <h4>Leave a review</h4>
+        <div class="stars-input" id="starsInput" role="radiogroup" aria-label="Rating"></div>
+        <input name="name" placeholder="Your name" required maxlength="40">
+        <textarea name="comment" placeholder="Share your experience…" required maxlength="500" rows="3"></textarea>
+        <button class="btn btn-sm" type="submit">Post review</button>
+        <small class="muted" id="reviewNote"></small>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
