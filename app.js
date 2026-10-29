@@ -1058,10 +1058,10 @@
     const destination = String(formData.get("dest") || "").trim();
     const details = String(formData.get("details") || "").trim();
 
-    const message =
-      `Hello The OPENS Journey! I'm ${name}. ` +
-      `I'm interested in ${destination}. ${details}`.trim();
-
+   const message = (
+  `Hello The OPENS Journey! I'm ${name}. ` +
+  `I'm interested in ${destination}. ${details}`
+).trim();
     if (wa) {
       window.open(
         `https://wa.me/${wa}?text=${encodeURIComponent(message)}`,
