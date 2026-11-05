@@ -1,7 +1,7 @@
-==========================================================================
+========================================================================================
  THE OPENS JOURNEY - TRAVEL AGENCY WEBSITE
  Complete README (setup, customization, hosting, reviews, troubleshooting)
-==========================================================================
+========================================================================================
 
 TABLE OF CONTENTS
   1.  What this project is
@@ -59,9 +59,9 @@ number, WhatsApp number, email, address and photos must be added by
 the owner. Please have the owner review all descriptions for accuracy.
 
 
-------------------------------------------------------------------------
+----------------------------------------------------------------------------------
 2. FEATURES
-------------------------------------------------------------------------
+----------------------------------------------------------------------------------
   - Front section with the logo and agency name, mountain-sunrise
     background, tagline and two call-to-action buttons
   - Sticky navigation bar that becomes solid white when scrolling
