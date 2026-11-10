@@ -1,271 +1,79 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#102d2b">
-  <meta name="description" content="Discover thoughtfully planned journeys across the Himalayas, Dooars, Kashmir, Goa, Andaman and Northeast India.">
-  <title>The OPENS Journey — Find Your Somewhere</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The OPENS Journey — Find Your Next Destination</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="nav" id="nav">
-    <a class="brand" href="#top" aria-label="The OPENS Journey home">
-      <span class="logo-slot" data-logo></span>
-      <span class="brand-name">The OPENS Journey</span>
-    </a>
 
-    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="links" id="links">
-      <a href="#destinations">Destinations</a>
-      <a href="#packages">Journeys</a>
-      <a href="#why">Why us</a>
-      <a href="#contact">Contact</a>
-      <a class="btn btn-sm" href="#contact" data-plan>Plan my trip</a>
-    </nav>
+  <!-- Navigation Bar -->
+  <header class="header">
+    <div class="logo">✈️ The OPENS Journey</div>
+    <ul class="nav-links">
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-bg" aria-hidden="true"></div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Explore The Unexplored</h1>
+    <p>Handcrafted journeys, breathtaking landscapes, and unforgettable tour experiences.</p>
+  </section>
 
-      <div class="hero-inner">
-        <span class="logo-slot logo-xl" data-logo></span>
-        <p class="eyebrow hero-eyebrow">YOUR NEXT STORY STARTS HERE</p>
-        <h1>The OPENS Journey</h1>
-        <p class="tagline">Open your eyes. Open your heart. Open the road.</p>
-        <p class="sub">
-          Handcrafted escapes across mountain trails, quiet forests,
-          hidden valleys and beautiful coastlines.
-        </p>
+  <!-- Main Content Container -->
+  <main class="main-container" id="destinations">
+    
+    <!-- Search and Filter Controls -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search destination, country or city...">
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="Hill Station">Hill Station</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Relaxation">Relaxation</option>
+      </select>
+    </div>
 
-        <div class="cta">
-          <a class="btn" href="#destinations">Explore destinations ↗</a>
-          <a class="btn btn-ghost" href="#packages">Discover our journeys</a>
-        </div>
-
-        <div class="hero-note">
-          <span class="hero-note-dot"></span>
-          MADE FOR THE WAY YOU WANT TO TRAVEL
-        </div>
-      </div>
-
-      <a class="scroll" href="#destinations" aria-label="Scroll to destinations">
-        <span></span>
-      </a>
-    </section>
-
-    <section class="section" id="destinations">
-      <div class="wrap">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Find your somewhere</p>
-            <h2>Where will the road take you?</h2>
-            <p class="section-intro">
-              From Himalayan mornings to slow coastal evenings,
-              your next story starts here.
-            </p>
-          </div>
-
-          <label class="search-box" for="destinationSearch">
-            <span aria-hidden="true">⌕</span>
-            <input
-              id="destinationSearch"
-              type="search"
-              placeholder="Search places, regions, experiences…"
-              autocomplete="off"
-            >
-            <kbd>Search</kbd>
-          </label>
-        </div>
-
-        <div class="filters" id="filters" role="tablist" aria-label="Filter destinations"></div>
-        <p class="results-count" id="resultsCount" aria-live="polite"></p>
-        <div class="grid" id="grid"></div>
-      </div>
-    </section>
-
-    <section class="section packages-section" id="packages">
-      <div class="wrap">
-        <p class="eyebrow">Thoughtfully put together</p>
-        <h2>Journeys worth looking forward to.</h2>
-        <p class="section-intro">
-          A few ways to begin. Every itinerary can be tailored to your dates,
-          group and budget.
-        </p>
-
-        <div class="package-grid" id="packageGrid">
-          <article class="package-card package-featured">
-            <div class="package-art package-hills">
-              <span>01 / THE HIGHLANDS</span>
-            </div>
-            <div class="package-copy">
-              <p class="package-kicker">MOUNTAINS · CULTURE · VIEWS</p>
-              <h3>Himalayan Hideaway</h3>
-              <p>Tea-scented mornings, mountain roads and unhurried hill-town evenings.</p>
-              <div class="package-meta">
-                <span>3–7 days</span>
-                <span>Custom quote</span>
-              </div>
-              <button class="text-link package-enquire" data-package="Himalayan Hideaway" data-dest="Darjeeling">
-                Explore this journey <span>↗</span>
-              </button>
-            </div>
-          </article>
-
-          <article class="package-card">
-            <div class="package-art package-forest">
-              <span>02 / INTO THE WILD</span>
-            </div>
-            <div class="package-copy">
-              <p class="package-kicker">WILDLIFE · RIVERS · TEA GARDENS</p>
-              <h3>Dooars Unplugged</h3>
-              <p>Green forest trails, riverside pauses and the quiet magic of the foothills.</p>
-              <div class="package-meta">
-                <span>2–3 days</span>
-                <span>Custom quote</span>
-              </div>
-              <button class="text-link package-enquire" data-package="Dooars Unplugged" data-dest="Dooars">
-                Explore this journey <span>↗</span>
-              </button>
-            </div>
-          </article>
-
-          <article class="package-card">
-            <div class="package-art package-coast">
-              <span>03 / SALT IN THE AIR</span>
-            </div>
-            <div class="package-copy">
-              <p class="package-kicker">ISLANDS · BEACHES · SLOW DAYS</p>
-              <h3>Coastal Escape</h3>
-              <p>Blue water, golden-hour walks and space to properly switch off.</p>
-              <div class="package-meta">
-                <span>4–7 days</span>
-                <span>Custom quote</span>
-              </div>
-              <button class="text-link package-enquire" data-package="Coastal Escape" data-dest="Andaman">
-                Explore this journey <span>↗</span>
-              </button>
-            </div>
-          </article>
-        </div>
-
-        <p class="package-note">
-          Package durations are starting suggestions. Pricing and availability
-          are confirmed after your enquiry.
-        </p>
-      </div>
-    </section>
-
-    <section class="section alt" id="why">
-      <div class="wrap">
-        <p class="eyebrow">Why travel with us</p>
-        <h2>Trips planned by people who know the roads</h2>
-
-        <div class="features">
-          <article>
-            <div class="ico">🧭</div>
-            <h3>Local knowledge</h3>
-            <p>Routes, stays and timings picked for the season, not copied from a brochure.</p>
-          </article>
-          <article>
-            <div class="ico">✦</div>
-            <h3>Made around you</h3>
-            <p>Family, couple, friends or solo — we shape the itinerary and budget to fit.</p>
-          </article>
-          <article>
-            <div class="ico">↗</div>
-            <h3>One point of contact</h3>
-            <p>Stays, transport and sightseeing handled together, so you can enjoy the trip.</p>
-          </article>
-          <article>
-            <div class="ico">☆</div>
-            <h3>Traveller reviews</h3>
-            <p>Explore feedback and share your experience with fellow travellers.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="wrap contact">
-        <div>
-          <p class="eyebrow">Let's plan something special</p>
-          <h2>Tell us where. We'll plan the how.</h2>
-          <p class="muted">
-            Tell us your dream destination, dates, group size and budget.
-            We'll help you find the right journey.
-          </p>
-          <ul class="contact-list" id="contactList"></ul>
-        </div>
-
-        <form class="card form" id="enquiry">
-          <label>
-            Your name
-            <input name="name" required maxlength="60" autocomplete="name" placeholder="How should we call you?">
-          </label>
-
-          <label>
-            Destination
-            <select name="dest" id="enqDest"></select>
-          </label>
-
-          <label>
-            Travel dates / group size
-            <input name="details" maxlength="120" placeholder="e.g. 10–15 Dec, 4 people">
-          </label>
-
-          <button class="btn" type="submit">Send enquiry on WhatsApp ↗</button>
-          <small class="muted" id="enqNote"></small>
-        </form>
-      </div>
-    </section>
+    <!-- Tour Cards Grid -->
+    <div id="destinationsGrid" class="destinations-grid"></div>
   </main>
 
-  <footer class="footer">
-    <span class="logo-slot logo-sm" data-logo></span>
-    <p>© <span id="year"></span> The OPENS Journey</p>
-    <p class="footer-note">Open your eyes. Open your heart. Open the road.</p>
-  </footer>
-
+  <!-- Destination Detail Modal -->
   <div class="modal" id="modal" hidden>
     <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="mTitle">
-      <button class="close" id="mClose" aria-label="Close">×</button>
-      <div class="m-hero" id="mHero"></div>
+      <div class="modal-header">
+        <h3 id="mTitle">Destination Details</h3>
+        <button class="close-btn" id="closeModalBtn">&times;</button>
+      </div>
 
-      <div class="m-body">
-        <h3 id="mTitle"></h3>
-        <p class="rating-line" id="mRating"></p>
+      <div class="modal-body">
+        <img id="mImg" class="modal-img" src="" alt="Destination Image">
+        <p id="mLoc" class="card-location"></p>
         <p id="mDesc"></p>
-        <div class="chips" id="mChips"></div>
-        <ul class="highlights" id="mHigh"></ul>
+        
+        <div style="margin-top: 1rem; font-weight: bold; font-size: 1.2rem;" id="mPrice"></div>
 
-        <div class="m-actions">
-          <a class="btn btn-sm" id="mPlan" href="#contact">Plan this trip</a>
-          <label class="btn btn-sm btn-ghost-dark admin-only" hidden>
-            Add photo
-            <input type="file" id="mUpload" accept="image/*" hidden>
-          </label>
-        </div>
+        <hr style="margin: 1.5rem 0; border: none; border-top: 1px solid var(--border-color);">
 
-        <hr>
         <h4>Traveller reviews</h4>
         <div id="mReviews" class="reviews"></div>
 
+        <!-- Add Review Form -->
         <form id="reviewForm" class="review-form">
           <h4>Leave a review</h4>
-          <div class="stars-input" id="starsInput" role="radiogroup" aria-label="Rating"></div>
-          <input name="name" placeholder="Your name" required maxlength="40">
-          <textarea name="comment" placeholder="Share your experience…" required maxlength="500" rows="3"></textarea>
+          <input type="text" id="reviewerName" name="name" placeholder="Your name" required maxlength="40">
+          <select id="reviewerRating" required>
+            <option value="5">⭐⭐⭐⭐⭐ (5/5)</option>
+            <option value="4">⭐⭐⭐⭐ (4/5)</option>
+            <option value="3">⭐⭐⭐ (3/5)</option>
+            <option value="2">⭐⭐ (2/5)</option>
+            <option value="1">⭐ (1/5)</option>
+          </select>
+          <textarea id="reviewerComment" name="comment" placeholder="Share your experience..." required rows="3"></textarea>
           <button class="btn btn-sm" type="submit">Post review</button>
           <small class="muted" id="reviewNote"></small>
         </form>
@@ -273,6 +81,11 @@
     </div>
   </div>
 
+  <footer>
+    <p>&copy; 2026 The OPENS Journey. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
   <script src="config.js"></script>
   <script src="app.js"></script>
 </body>
