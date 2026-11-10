@@ -1,7 +1,7 @@
-=====================================================================
+====================================================================================================
  THE OPENS JOURNEY - TRAVEL AGENCY WEBSITE
  Complete README (setup, customization, hosting, reviews, troubleshooting)
-=====================================================================
+====================================================================================================
 
 TABLE OF CONTENTS
   1.  What this project is
@@ -38,9 +38,9 @@ TABLE OF CONTENTS
   16. Credits and legal notes
 
 
----------------------------------------------------------------------
+-----------------------------------------------------------------------
 1. WHAT THIS PROJECT IS
----------------------------------------------------------------------
+-----------------------------------------------------------------------
 A modern, professional, mobile-friendly website for "The OPENS Journey",
 a travel agency that plans trips to:
 
@@ -59,9 +59,9 @@ number, WhatsApp number, email, address and photos must be added by
 the owner. Please have the owner review all descriptions for accuracy.
 
 
----------------------------------------------------------------------
+----------------------------------------------------------------------------------
 2. FEATURES
----------------------------------------------------------------------
+----------------------------------------------------------------------------------
   - Front section with the logo and agency name, mountain-sunrise
     background, tagline and two call-to-action buttons
   - Sticky navigation bar that becomes solid white when scrolling
@@ -81,9 +81,9 @@ the owner. Please have the owner review all descriptions for accuracy.
   - Respects "reduce motion" system setting
 
 
----------------------------------------------------------------------
+------------------------------------------------------------------------
 3. FOLDER STRUCTURE
----------------------------------------------------------------------
+------------------------------------------------------------------------
   opens-journey/
   |
   |-- index.html        The page structure (sections, modal, form)
@@ -105,9 +105,9 @@ the owner. Please have the owner review all descriptions for accuracy.
               northeast.jpg
 
 
----------------------------------------------------------------------
+------------------------------------------------------------------------
 4. QUICK START
----------------------------------------------------------------------
+------------------------------------------------------------------------
   1. Unzip opens-journey.zip.
   2. Double-click index.html. It opens in your browser.
   3. Done. The site works immediately with placeholder logo and
